@@ -18,6 +18,7 @@ public class UserResource {
     public ResponseEntity<List<User>> findAll(){
         User maria = new User("1","Maria Brown","maria@gmail.com");
         User alex = new User("2","Alex Green","alex@gmail.com");
+        //User john = new User("3","John Red","john@gmail.com");
         List<User> list = new ArrayList<>();
         list.addAll(Arrays.asList(maria,alex));
         return ResponseEntity.ok().body(list);
