@@ -1,11 +1,14 @@
 package br.com.guilhermefausto.cursonelioalvesspringmongo.domain;
 
 import br.com.guilhermefausto.cursonelioalvesspringmongo.dto.AuthorDto;
+import br.com.guilhermefausto.cursonelioalvesspringmongo.dto.CommentDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Document
 public class Post implements Serializable {
@@ -17,6 +20,8 @@ public class Post implements Serializable {
     private String title;
     private String body;
     private AuthorDto author;
+
+    private List<CommentDto> comments = new ArrayList<>();
 
     public Post(){
 
@@ -64,6 +69,14 @@ public class Post implements Serializable {
 
     public AuthorDto getAuthor() {
         return author;
+    }
+
+    public List<CommentDto> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentDto> comments) {
+        this.comments = comments;
     }
 
     public void setAuthor(AuthorDto author) {
