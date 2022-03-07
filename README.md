@@ -7,3 +7,4 @@ Algumas características:
 - Persistência e mapeamento dos dados com Spring Data e MongoDB(especificação JPA)
 - Gestão de dependencias do projeto com Maven
 - Tratamento de erros e exceções de forma customizada
+- Linha de teste Adicionada
